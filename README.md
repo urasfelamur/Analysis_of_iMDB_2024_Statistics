@@ -52,15 +52,15 @@ We have derived new statistics from this dataset and attained new columns, their
 ## Package Structure
 
 -    actor_analysis/
--    ├── data_processing.py      # Load & preprocess data
--    ├── analysis.py             # Actor and general statistics
--    ├── visualization.py        # Visual plots
--    └── __init__.py             # Public imports
-TUTORIAL.ipynb              # Walkthrough with code & charts
-pyproject.toml              # Build system
-LICENSE.txt                 # MIT License
-README.md                   # README file
-IMDb2024                    # Dataset file
+-    ├── data_processing.py         # Load & preprocess data
+-    ├── analysis.py                # Actor and general statistics
+-    ├── visualization.py           # Visual plots
+-    └── __init__.py                # Public imports
+-    TUTORIAL.ipynb                 # Walkthrough with code & charts
+-    pyproject.toml                 # Build system
+-    LICENSE.txt                    # MIT License
+-    README.md                      # README file
+-    IMDb2024                       # Dataset file
 
 ## License
 
