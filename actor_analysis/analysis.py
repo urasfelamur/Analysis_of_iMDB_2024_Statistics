@@ -1,6 +1,7 @@
 from collections import Counter
 import pandas as pd
 
+# Calculating the general statistics for comparison.
 def calculate_general_statistics(df):
     budget_mean_general = round(df["Budget"].mean(), 2)
     revenue_mean_general = round(df["Revenue"].mean(), 2)
@@ -8,11 +9,13 @@ def calculate_general_statistics(df):
     general_profit = round((revenue_mean_general - budget_mean_general) / df.size, 2)
     return budget_mean_general, revenue_mean_general, vote_mean_general, general_profit
 
+# Getting the top 50 common actors.
 def get_top_actors(cast_list, top_n=50):
     name_counts = Counter(cast_list)
     top_actors = name_counts.most_common(top_n)
     return top_actors
 
+# Calculating the statistic for the columns in the processed dataframe accordingly to the actors.
 def calculate_actor_statistics(df, top_actors, general_stats):
     actor_stats = []
     budget_mean_general, revenue_mean_general, vote_mean_general, general_profit = general_stats

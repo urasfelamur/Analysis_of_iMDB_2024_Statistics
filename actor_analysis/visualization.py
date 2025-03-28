@@ -1,10 +1,9 @@
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+# Plotting a bar chart of the given metric for the top actors.
 def plot_actor_statistics(actor_stats, metric):
     """
-    Plots a bar chart of the given metric for the top actors.
-
     Parameters:
     - actor_stats (DataFrame): The DataFrame containing actor statistics.
     - metric (str): The column name in the DataFrame to plot.

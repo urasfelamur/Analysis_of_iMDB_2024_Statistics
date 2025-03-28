@@ -1,6 +1,7 @@
 import pandas as pd
 import ast
 
+# Loading the csv file for the dataset as a dataframe with the correct columns.
 def load_data(file_path):
     df = pd.read_csv(file_path, sep=",")
     df.columns = ['Budget', 'Home_Page', 'Movie_Name', 'Genres', 'Overview', 'Cast',
@@ -8,6 +9,7 @@ def load_data(file_path):
                 'Revenue', 'Run_Time', 'Tagline', 'Vote_Average', 'Vote_Count']
     return df
 
+# Dropping the columns that are not needed and preprocessing remainig data.
 def preprocess_data(df):
     df = df.drop(columns=["Home_Page", "Movie_Name", "Genres", "Overview", "Storyline",
                         "Production_Company", "Release_Date", "Run_Time", "Tagline", "Vote_Count"])
@@ -18,6 +20,7 @@ def preprocess_data(df):
     df["Vote_Average"] = df["Vote_Average"].astype(int)
     return df
 
+# Extracting the actors from the total cast column.
 def extract_cast_list(df):
     all_names_list = []
     for row in df['Cast']:
